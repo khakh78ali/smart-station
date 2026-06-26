@@ -11,6 +11,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap');
         
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
         body {
             font-family: 'Cairo', sans-serif;
             scroll-behavior: smooth;
@@ -68,10 +72,26 @@
     <nav class="fixed w-full z-50 glass py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="text-2xl font-black gradient-text">محطة سمارت</div>
-            <div class="hidden md:flex space-x-8 space-x-reverse">
+            <div class="hidden md:flex items-center space-x-8 space-x-reverse">
                 <a href="#home" class="text-slate-700 hover:text-sky-600 transition font-bold">الرئيسية</a>
                 <a href="#about" class="text-slate-700 hover:text-sky-600 transition font-bold">من نحن</a>
+
+                <!-- Courses Dropdown -->
+                <div class="relative dropdown">
+                    <button class="text-slate-700 hover:text-sky-600 transition font-bold flex items-center gap-1">
+                        الدورات <i class="fas fa-chevron-down text-xs mt-1"></i>
+                    </button>
+                    <div class="dropdown-menu absolute right-0 mt-0 w-64 bg-white border border-slate-100 shadow-xl rounded-2xl hidden z-50 overflow-hidden">
+                        <a href="#courses" class="block px-6 py-3 text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition">دورة الرخصة الدولية لقيادة الحاسوب</a>
+                        <a href="#courses" class="block px-6 py-3 text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition">الطباعة و السكرتارية</a>
+                        <a href="#courses" class="block px-6 py-3 text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition">أمن المعلومات</a>
+                        <a href="#courses" class="block px-6 py-3 text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition">الذكاء الاصطناعي</a>
+                        <a href="#courses" class="block px-6 py-3 text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition">البرمجة بلغة بايثون</a>
+                    </div>
+                </div>
+
                 <a href="#services" class="text-slate-700 hover:text-sky-600 transition font-bold">الخدمات</a>
+                <a href="#e-services" class="text-slate-700 hover:text-sky-600 transition font-bold">الخدمات الإلكترونية</a>
                 <a href="#locations" class="text-slate-700 hover:text-sky-600 transition font-bold">مواقعنا</a>
                 <a href="#register" class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-full font-bold transition">انضم إلينا</a>
             </div>
@@ -125,6 +145,39 @@
                     <p class="text-slate-600 leading-relaxed text-lg">
                         توفير حلول تقنية متكاملة وخدمات لوجستية ذكية تدعم نمو الأعمال وتعزز جودة الحياة للمجتمع الأردني من خلال التميز والابتكار المستمر.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4 text-slate-900" data-aos="fade-down">دوراتنا التدريبية</h2>
+                <div class="h-1 w-20 bg-sky-600 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600 font-medium">نقدم برامج تدريبية متخصصة لتطوير مهاراتكم المهنية والتقنية</p>
+            </div>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="glass p-6 rounded-3xl text-center card-hover border-t-4 border-sky-600" data-aos="zoom-in">
+                    <i class="fas fa-laptop-code text-4xl text-sky-600 mb-4"></i>
+                    <h5 class="text-lg font-bold text-slate-800">الرخصة الدولية لقيادة الحاسوب</h5>
+                </div>
+                <div class="glass p-6 rounded-3xl text-center card-hover border-t-4 border-indigo-600" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-print text-4xl text-indigo-600 mb-4"></i>
+                    <h5 class="text-lg font-bold text-slate-800">الطباعة و السكرتارية</h5>
+                </div>
+                <div class="glass p-6 rounded-3xl text-center card-hover border-t-4 border-red-600" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-shield-alt text-4xl text-red-600 mb-4"></i>
+                    <h5 class="text-lg font-bold text-slate-800">أمن المعلومات</h5>
+                </div>
+                <div class="glass p-6 rounded-3xl text-center card-hover border-t-4 border-amber-600" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-brain text-4xl text-amber-600 mb-4"></i>
+                    <h5 class="text-lg font-bold text-slate-800">الذكاء الاصطناعي</h5>
+                </div>
+                <div class="glass p-6 rounded-3xl text-center card-hover border-t-4 border-blue-600" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fab fa-python text-4xl text-blue-600 mb-4"></i>
+                    <h5 class="text-lg font-bold text-slate-800">البرمجة بلغة بايثون</h5>
                 </div>
             </div>
         </div>
@@ -186,6 +239,55 @@
             </div>
             <div data-aos="fade-right">
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Tech Dashboard" class="rounded-3xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Electronic Services -->
+    <section id="e-services" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4 text-slate-900" data-aos="fade-down">الخدمات الإلكترونية</h2>
+                <div class="h-1 w-20 bg-sky-600 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600 font-medium">بوابتكم لإنجاز المعاملات والخدمات الرقمية بكل سهولة وأمان</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass p-8 rounded-3xl card-hover flex items-center gap-4" data-aos="fade-right">
+                    <div class="w-14 h-14 bg-sky-100 rounded-2xl flex items-center justify-center text-sky-600 text-2xl shrink-0">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">إصدار الشهادات</h4>
+                        <p class="text-sm text-slate-600">طلب وتوثيق الشهادات التدريبية</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl card-hover flex items-center gap-4" data-aos="fade-right" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 text-2xl shrink-0">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">تجديد العضويات</h4>
+                        <p class="text-sm text-slate-600">تجديد الاشتراكات السنوية إلكترونياً</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl card-hover flex items-center gap-4" data-aos="fade-right" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 text-2xl shrink-0">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">التحقق من البيانات</h4>
+                        <p class="text-sm text-slate-600">نظام التحقق السريع من صحة الوثائق</p>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl card-hover flex items-center gap-4" data-aos="fade-right" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-rose-100 rounded-2xl flex items-center justify-center text-rose-600 text-2xl shrink-0">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">الدعم الفني الرقمي</h4>
+                        <p class="text-sm text-slate-600">مساعدة فورية عبر الدردشة الذكية</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -267,8 +369,13 @@
     <footer class="py-12 border-t border-slate-100">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-right">
             <div>
-                <div class="text-2xl font-black gradient-text mb-4">محطة سمارت</div>
-                <p class="text-slate-400">© 2026 جميع الحقوق محفوظة لمحطة سمارت</p>
+                <div class="text-2xl font-black gradient-text mb-2">محطة سمارت</div>
+                <div class="text-slate-700 font-bold mb-2">المملكة الأردنية الهاشمية</div>
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-center text-slate-600 mb-4">
+                    <span class="font-bold"><i class="fas fa-phone-alt ml-2 text-sky-600"></i> تواصل معنا: <a href="tel:00962790000000" class="hover:text-sky-600">00962790000000</a></span>
+                    <span class="font-bold"><i class="fas fa-envelope ml-2 text-sky-600"></i> البريد: info@smartstation.jo</span>
+                </div>
+                <p class="text-slate-400 text-sm">© 2026 جميع الحقوق محفوظة لمحطة سمارت</p>
             </div>
             <div class="flex gap-6 text-2xl">
                 <a href="#" class="text-slate-400 hover:text-sky-400 transition"><i class="fab fa-facebook"></i></a>
